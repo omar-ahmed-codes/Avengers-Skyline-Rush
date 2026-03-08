@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avengers Neon Cross</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;700&display=swap"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="title-wrap">
+        <p class="kicker">EARTH'S MIGHTIEST ARCADE</p>
+        <h1>Avengers: Skyline Rush</h1>
+      </header>
+
+      <section class="hud" aria-label="Game stats">
+        <p>Score <span id="score">0</span></p>
+        <p>Level <span id="level">1</span></p>
+        <p>High <span id="high-score">0</span></p>
+      </section>
+
+      <p id="status" class="status">Portal lanes are open. Claim the skyline.</p>
+
+      <div id="board" class="board" aria-label="Avengers road board">
+        <div id="grid-layer" class="grid-layer"></div>
+        <div id="actors-layer" class="actors-layer"></div>
+        <div class="board-controls">
+          <button id="sound" type="button">Sound: On</button>
+          <button id="pause" type="button">Pause</button>
+        </div>
+        <div id="overlay" class="overlay visible" aria-live="polite">
+          <div class="overlay-card">
+            <p id="overlay-title" class="overlay-title">Avengers Neon Cross</p>
+            <p id="overlay-subtitle" class="overlay-subtitle">Press Play to start your run.</p>
+            <div class="overlay-stats">
+              <p>Score <span id="overlay-score">0</span></p>
+              <p>High <span id="overlay-high">0</span></p>
+            </div>
+            <div class="overlay-actions">
+              <button id="play" type="button">Play</button>
+              <button id="restart" type="button">Restart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="hero-picker" aria-label="Choose your Avenger">
+        <p class="hero-picker-title">Select Hero</p>
+        <div id="heroes" class="hero-buttons"></div>
+      </section>
+
+      <section class="controls" aria-label="On-screen controls">
+        <button data-dir="up" aria-label="Move up">▲</button>
+        <div class="controls-row">
+          <button data-dir="left" aria-label="Move left">◀</button>
+          <button data-dir="down" aria-label="Move down">▼</button>
+          <button data-dir="right" aria-label="Move right">▶</button>
+        </div>
+      </section>
+
+      <section class="leaderboard" aria-label="High scores">
+        <h2>Hall of Heroes</h2>
+        <ol id="scores-list"></ol>
+      </section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
