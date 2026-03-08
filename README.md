@@ -1,36 +1,23 @@
-# Classic Snake
+# Avengers Skyline Rush
 
-Minimal classic Snake implementation:
-- Grid movement
-- Food spawning
-- Growth + score
-- Game-over on wall/self collision
-- Restart
-- Keyboard (arrow keys/WASD) + on-screen controls
+Avengers-themed endless 3D road-crossing game inspired by Crossy Road.
 
-## Run
+## Features
 
-1. From this repo, start a static file server:
-   - `python3 -m http.server 8000`
-2. Open `http://localhost:8000`
+- True 3D WebGL gameplay with animated Lego/Roblox-style heroes and villains
+- Endless forward road scrolling with smooth camera-follow movement
+- Avengers Tower-inspired animated skyline with airships and city atmosphere
+- Keyboard + on-screen controls
+- In-game overlay start/restart flow
+- Persistent high scores using `localStorage`
+
+## Run locally
+
+1. Start a static server in the repo root:
+   - `python3 -m http.server 8081`
+2. Open:
+   - `http://localhost:8081`
 
 ## Tests
 
-Core game logic tests are in `src/gameLogic.test.js` and use Node's built-in test runner.
-
-- Run: `node --test src/gameLogic.test.js`
-
-## Deploy (Vercel)
-
-- `vercel`
-- `vercel --prod`
-
-## Manual verification checklist
-
-- Controls: arrow keys and `WASD` change movement direction.
-- Reverse prevention: immediate 180-degree turns are ignored.
-- Food: snake grows by 1 and score increments when food is eaten.
-- Boundaries: hitting wall ends game.
-- Self collision: running into body ends game.
-- Pause: press `Space` or click `Pause`, then resume.
-- Restart: clicking `Restart` resets board and score.
+- `npm test`
